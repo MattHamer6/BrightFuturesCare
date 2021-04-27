@@ -1,0 +1,50 @@
+/* Safari */
+@media not all and (min-resolution:.001dpcm) { 
+    .wpcf7 .preference-radios label input {
+        padding:0!important;
+        background:transparent!important;
+        border:none!important;
+        visibility:hidden;
+    }
+}
+
+/* 7th August 2020 */
+.small-banner {
+    position:relative;
+    z-index:10;
+}
+.pdf-download-wrapper {
+    position:relative;
+    z-index:10;
+}
+
+@media only screen and (min-width:576px) {
+    #menu-item-884 {
+        display:none;
+    }
+}
+
+.large-banner-slider .slick-dots {
+    padding: 0;
+	list-style: none;
+	display: flex;
+	margin: 20px 0 0;
+	justify-content: center;
+}
+.large-banner-slider .slick-dots li .dot {
+    background: white;
+	border: 1px solid #707070;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+.large-banner-slider .slick-dots li.slick-active .dot {
+    background:#fe9d2b;
+}
+.large-banner-slider .slick-dots li:not(:last-of-type) {
+    margin-right:8px;
+}
+
+.grecaptcha-badge { visibility: hidden; }

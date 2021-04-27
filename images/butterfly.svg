@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1191.521" height="1085.004" viewBox="0 0 1191.521 1085.004">
+  <g id="Group_20" data-name="Group 20" transform="matrix(0.921, 0.391, -0.391, 0.921, 156.568, -410.621)">
+    <path id="Path_1" data-name="Path 1" d="M809.8,381.518c-23.957-135.792-170.412-159.025-270.537-78.344C455.652,371.607,209.153,663.282,338.687,753.98,449.69,831.707,840.658,556.577,809.8,381.518Z" transform="translate(441.774 47.146)" fill="#fe9d2b" style="mix-blend-mode: multiply;isolation: isolate"/>
+    <path id="Path_2" data-name="Path 2" d="M332.309,295.789C164.582,615.611,737.833,828.968,843.25,727.1,970.1,604.545,408.907,149.71,332.309,295.789Z" transform="translate(441.868 318.65)" fill="#0d988c" style="mix-blend-mode: multiply;isolation: isolate"/>
+    <path id="Path_3" data-name="Path 3" d="M288.3,381.518c23.93-135.792,170.385-159.025,270.511-78.344,83.635,68.433,330.108,360.109,200.6,450.807C648.384,831.707,257.416,556.577,288.3,381.518Z" transform="translate(48.55 47.146)" fill="#8abb2a" style="mix-blend-mode: multiply;isolation: isolate"/>
+    <g id="Group_1" data-name="Group 1" transform="translate(284.693 585.835)" style="mix-blend-mode: multiply;isolation: isolate">
+      <path id="Path_4" data-name="Path 4" d="M814.222,295.789C981.948,615.638,408.7,828.968,303.28,727.1,176.431,604.545,737.623,149.71,814.222,295.789Z" transform="translate(-284.693 -267.185)" fill="#cc004a"/>
+    </g>
+    <g id="Group_2" data-name="Group 2" transform="translate(802.422 254.862)">
+      <path id="Path_5" data-name="Path 5" d="M305.16,487.617c23.286-42.381,45.308-85.139,75.39-123.277,32.766-41.549,71.092-69.75,115.219-97.789,5.694-3.6,2.068-13.778-4.78-11.307-44.5,16.249-81.595,55.811-109.742,92.471-32.094,41.818-59.328,89.785-77.242,139.419-.241.671.806,1.1,1.155.483Z" transform="translate(-303.97 -254.862)" fill="#818386"/>
+    </g>
+    <g id="Group_3" data-name="Group 3" transform="translate(585.291 254.862)">
+      <path id="Path_6" data-name="Path 6" d="M489.31,487.617C466.025,445.236,444,402.478,413.92,364.34c-32.766-41.549-71.092-69.75-115.219-97.789-5.693-3.6-2.068-13.778,4.781-11.307,44.5,16.249,81.594,55.811,109.74,92.471,32.1,41.818,59.329,89.785,77.243,139.419.242.671-.806,1.1-1.155.483Z" transform="translate(-295.885 -254.862)" fill="#818386"/>
+    </g>
+  </g>
+</svg>

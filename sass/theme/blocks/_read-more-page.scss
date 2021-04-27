@@ -1,0 +1,102 @@
+.read-more-page {
+	padding: 20px 0;
+
+	@include media-breakpoint-up(lg) {
+		padding: 30px 0;
+	}
+	@include media-breakpoint-up(xl) {
+		padding: 50px 0;
+	}
+	@media only screen and (min-width: 1920px) {
+		padding: 80px 0;
+	}
+	&-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+
+		@include media-breakpoint-up(md) {
+			flex-wrap: nowrap;
+		}
+		.read-more-block {
+			width: calc(100% - 16px);
+			margin: 0 0 16px;
+
+			@include media-breakpoint-up(md) {
+				margin: 0 8px;
+			}
+			&.block-3 {
+				@include media-breakpoint-only(md) {
+					display: none;
+				}
+			}
+
+			.image {
+				@extend %backgroundImage;
+				height: 250px;
+
+				@include media-breakpoint-up(md) {
+					height: 225px;
+				}
+				@include media-breakpoint-up(lg) {
+					height: 200px;
+				}
+				@include media-breakpoint-up(xl) {
+					height: 250px;
+				}
+				@media only screen and (min-width: 1920px) {
+					height: 355px;
+				}
+			}
+			&-wrapper {
+				background: $grey-300;
+				padding: 20px;
+
+				@include media-breakpoint-up(lg) {
+					padding: 30px;
+				}
+				@media only screen and (min-width: 1920px) {
+					padding: 40px 40px 50px;
+				}
+
+				h2 {
+					color: $primary;
+					@extend %latoBold;
+					margin-bottom: 20px;
+					font-size: 24px;
+
+					@include media-breakpoint-up(sm) {
+						font-size: 28px;
+					}
+					@include media-breakpoint-up(md) {
+						font-size: 28px;
+					}
+					@include media-breakpoint-up(lg) {
+						font-size: 28px;
+					}
+					@include media-breakpoint-up(xl) {
+						font-size: 34px;
+						margin-bottom: 30px;
+					}
+					@media only screen and (min-width: 1920px) {
+						font-size: 52px;
+						margin-bottom: 45px;
+					}
+				}
+			}
+		}
+	}
+	&.multi-read-more {
+		.read-more-page-wrapper {
+			flex-wrap: wrap;
+
+			.read-more-block {
+				margin-bottom: 16px;
+				width: 100%;
+
+				@include media-breakpoint-up(md) {
+					width: calc(100% / 2 - 16px);
+				}
+			}
+		}
+	}
+}

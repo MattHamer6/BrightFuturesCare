@@ -1,0 +1,88 @@
+.large-banner {
+	position: relative;
+	width: 100%;
+	@extend %backgroundImage;
+	display: flex;
+	align-items: center;
+	height: 250px;
+
+	@include media-breakpoint-up(lg) {
+		height: 400px;
+	}
+	@include media-breakpoint-up(xl) {
+		height: 450px;
+	}
+	@media only screen and (min-width: 1920px) {
+		height: 570px;
+	}
+	&-wrapper {
+		position: relative;
+		z-index: 10;
+
+		@include media-breakpoint-down(sm) {
+			text-align: center !important;
+		}
+		h2 {
+			@extend %latoBold;
+			color: $white;
+			margin-bottom: 0;
+			font-size: 20px;
+
+			@include media-breakpoint-up(sm) {
+				font-size: 24px;
+			}
+			@include media-breakpoint-up(md) {
+				font-size: 28px;
+			}
+			@include media-breakpoint-up(lg) {
+				font-size: 36px;
+			}
+			@include media-breakpoint-up(xl) {
+				font-size: 44px;
+			}
+			@media only screen and (min-width: 1920px) {
+				font-size: 52px;
+			}
+		}
+	}
+	.overlay {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: transparent linear-gradient(270deg, #ffffff 0%, #363636 100%) 0%
+			0% no-repeat padding-box;
+		mix-blend-mode: multiply;
+		opacity: 0.68;
+	}
+	.orange {
+		position: absolute;
+		display: none;
+		overflow: hidden;
+
+		@include media-breakpoint-up(sm) {
+			display: block;
+			width: 250px;
+			bottom: -25px;
+			right: -150px;
+		}
+		@include media-breakpoint-up(md) {
+			display: none;
+		}
+		@include media-breakpoint-up(lg) {
+			display: block;
+			width: 325px;
+			bottom: -85px;
+			right: -285px;
+		}
+		@include media-breakpoint-up(xl) {
+			width: 375px;
+			right: -320px;
+		}
+		@media only screen and (min-width: 1920px) {
+			bottom: -100px;
+			right: -375px;
+			width: 490px;
+		}
+	}
+}

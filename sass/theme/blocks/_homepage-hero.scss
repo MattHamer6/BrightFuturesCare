@@ -1,0 +1,190 @@
+.homepage-hero {
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding-bottom: 30px;
+
+	@include media-breakpoint-up(md) {
+		height: 350px;
+		flex-direction: row;
+		padding-bottom: 0;
+		margin-bottom: 10px;
+	}
+	@include media-breakpoint-up(lg) {
+		height: 435px;
+	}
+	@include media-breakpoint-up(xl) {
+		height: 550px;
+	}
+	@media only screen and (min-width: 1920px) {
+		height: 850px;
+	}
+	&-wrapper {
+		margin-left: auto;
+		width: 100%;
+		text-align: center;
+
+		@include media-breakpoint-up(md) {
+			width: 40%;
+			text-align: left;
+		}
+		@include media-breakpoint-up(lg) {
+			width: 30%;
+		}
+		@media only screen and (min-width: 1920px) {
+			padding-left: 50px;
+		}
+		h1 {
+			@extend %latoBold;
+			color: $primary;
+			margin-bottom: 10px;
+			font-size: 20px;
+
+			@include media-breakpoint-up(sm) {
+				font-size: 24px;
+			}
+			@include media-breakpoint-up(md) {
+				font-size: 28px;
+			}
+			@include media-breakpoint-up(lg) {
+				font-size: 36px;
+				margin-bottom: 20px;
+			}
+			@include media-breakpoint-up(xl) {
+				font-size: 44px;
+			}
+			@media only screen and (min-width: 1920px) {
+				font-size: 52px;
+				margin-bottom: 30px;
+			}
+		}
+		p {
+			color: $grey-400;
+			@extend %fontRegular;
+			margin: 0;
+			font-size: 16px;
+
+			@include media-breakpoint-up(lg) {
+				font-size: 18px;
+			}
+			@include media-breakpoint-up(xl) {
+				font-size: 24px;
+			}
+			@media only screen and (min-width: 1920px) {
+				font-size: 28px;
+			}
+		}
+		a {
+			background: $primary;
+
+			&:hover {
+				background: lighten($primary, 5%);
+			}
+		}
+		ul {
+			padding: 0;
+			list-style: none;
+			display: flex;
+			margin: 20px 0 0;
+			justify-content: center;
+
+			@include media-breakpoint-up(md) {
+				justify-content: flex-start;
+			}
+			@include media-breakpoint-up(xl) {
+				margin: 30px 0 0;
+			}
+			@media only screen and (min-width: 1920px) {
+				margin: 50px 0 0;
+			}
+
+			li {
+				.dot {
+					background: $white;
+					border: 1px solid $grey-200;
+					width: 15px;
+					height: 15px;
+					border-radius: 50%;
+					cursor: pointer;
+					transition: all 0.3s ease-in-out;
+				}
+				&.slick-active {
+					.dot {
+						background: $orange;
+					}
+				}
+				&:not(:last-of-type) {
+					margin-right: 8px;
+				}
+			}
+		}
+	}
+	// Desktop image
+	.image {
+		position: absolute;
+		height: 100%;
+		@extend %backgroundImage;
+		top: 0;
+		left: 0;
+		display: none;
+
+		@include media-breakpoint-up(md) {
+			display: block;
+			width: 55%;
+			max-width: 510px;
+		}
+		@include media-breakpoint-up(lg) {
+			width: 60%;
+			max-width: 660px;
+		}
+		@include media-breakpoint-up(xl) {
+			width: 65%;
+			max-width: 850px;
+		}
+		@media only screen and (min-width: 1920px) {
+			width: 65%;
+			max-width: 1250px;
+		}
+	}
+	// Tablet / Mobile banner
+	.banner {
+		display: block;
+		@extend %backgroundImage;
+		width: 100%;
+		margin-bottom: 30px;
+		height: 300px;
+
+		@include media-breakpoint-up(sm) {
+			height: 350px;
+		}
+		@include media-breakpoint-up(md) {
+			display: none;
+		}
+	}
+	// Orange blob
+	.orange {
+		position: absolute;
+		transform: translateY(-50%);
+		top: 60%;
+		display: none;
+
+		@include media-breakpoint-up(md) {
+			display: block;
+			width: 250px;
+			right: -200px;
+		}
+		@include media-breakpoint-up(lg) {
+			width: 300px;
+			right: -220px;
+		}
+		@include media-breakpoint-up(xl) {
+			right: -275px;
+			width: 350px;
+		}
+		@media only screen and (min-width: 1920px) {
+			width: 490px;
+			right: -325px;
+		}
+	}
+}

@@ -1,0 +1,40 @@
+<?php 
+  $content = get_field('employee_values_content', 'option');
+  $img = get_field('butterfly', 'option');
+?>
+
+<section class="vacancies-values">
+  <div class="container large-container">
+    <div class="content">
+      <?php echo $content; ?>
+    </div>
+    <div class="vacancies-values-wrapper">
+      <div class="image">
+        <img src="<?php echo $img; ?>" alt="Butterfly Values" />
+      </div>
+
+      <?php if( have_rows('values', 'option') ): ?>
+        <div class="values">
+          <?php while( have_rows('values', 'option') ): the_row(); ?>
+            <div class="values-wrapper">
+              <h3 style="color:<?php the_sub_field('title_colour'); ?>"><?php the_sub_field('value_name'); ?></h3>
+
+              <?php if( have_rows('list_of_values') ): ?>
+                <ul>
+                  <?php while( have_rows('list_of_values') ): the_row(); ?>
+                    <li><?php the_sub_field('value'); ?></li>
+                  <?php endwhile; ?>
+                </ul>
+              <?php endif; ?>
+
+            </div>
+          <?php endwhile; ?>
+          <div class="button-wrapper">
+            <a class="main-button" href="#" title="Find out more">Find out more</a>
+          </div>
+        </div>
+      <?php endif; ?>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,84 @@
+#main.size-small {
+	p,
+	b,
+	strong,
+	a {
+		&:not([data-fancybox]) {
+			font-size: 12px;
+
+			@include media-breakpoint-up(xl) {
+				font-size: 14px;
+			}
+			@media only screen and (min-width: 1920px) {
+				font-size: 18px;
+			}
+		}
+	}
+	h1,
+	h2 {
+		font-size: 24px;
+
+		@include media-breakpoint-up(xl) {
+			font-size: 32px;
+		}
+		@media only screen and (min-width: 1920px) {
+			font-size: 38px;
+		}
+	}
+}
+#main.size-normal {
+	p,
+	b,
+	strong,
+	a {
+		&:not([data-fancybox]) {
+			font-size: 14px;
+
+			@include media-breakpoint-up(xl) {
+				font-size: 16px;
+			}
+			@media only screen and (min-width: 1920px) {
+				font-size: 20px;
+			}
+		}
+	}
+	h1,
+	h2 {
+		font-size: 28px;
+
+		@include media-breakpoint-up(xl) {
+			font-size: 38px;
+		}
+		@media only screen and (min-width: 1920px) {
+			font-size: 46px;
+		}
+	}
+}
+#main.size-large {
+	p,
+	b,
+	strong,
+	a {
+		&:not([data-fancybox]) {
+			font-size: 18px;
+
+			@include media-breakpoint-up(xl) {
+				font-size: 20px;
+			}
+			@media only screen and (min-width: 1920px) {
+				font-size: 26px;
+			}
+		}
+	}
+	h1,
+	h2 {
+		font-size: 36px;
+
+		@include media-breakpoint-up(xl) {
+			font-size: 48px;
+		}
+		@media only screen and (min-width: 1920px) {
+			font-size: 56px;
+		}
+	}
+}

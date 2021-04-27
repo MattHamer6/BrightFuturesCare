@@ -1,0 +1,50 @@
+.testimonial-videos {
+	.parent {
+		.testimonial-wrapper {
+			background: $primary;
+
+			b {
+				display: block;
+				@extend %fontRegular;
+				color: $white;
+				font-size: 24px;
+				margin: 20px 0 30px;
+
+				@include media-breakpoint-up(md) {
+					font-size: 20px;
+				}
+				@include media-breakpoint-up(lg) {
+					font-size: 16px;
+					margin: 15px 0 20px;
+				}
+				@include media-breakpoint-up(xl) {
+					font-size: 20px;
+					margin: 20px 0 30px;
+				}
+				@media only screen and (min-width: 1920px) {
+					font-size: 28px;
+					margin: 20px 0 30px;
+				}
+			}
+			a {
+				@extend %fontBold;
+				font-size: 14px;
+				background: $white;
+				text-transform: lowercase;
+				padding: 6px 15px;
+				border-radius: 20px;
+
+				@media only screen and (min-width: 1920px) {
+					padding: 8px 15px;
+				}
+
+				&::before {
+					content: "\f04b";
+					font-family: FontAwesome;
+					font-size: 12px;
+					margin-right: 7px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,122 @@
+.wpcf7 {
+	max-width: none !important;
+	position: relative;
+	z-index: 10;
+
+	input,
+	textarea {
+		@extend %fontRegular;
+		background: $white;
+		color: $black !important;
+		border: 1px solid #707070 !important;
+		border-radius: 0 !important;
+		padding: 0 20px !important;
+
+		@include media-breakpoint-up(xl) {
+			font-size: 18px !important;
+		}
+		@media only screen and (min-width: 1920px) {
+			padding: 20px !important;
+			font-size: 24px !important;
+		}
+		&::placeholder {
+			color: $black !important;
+		}
+	}
+	input {
+		height: 50px !important;
+		margin-bottom: 20px;
+
+		@media only screen and (min-width: 1920px) {
+			height: 70px !important;
+			margin-bottom: 25px;
+		}
+	}
+	textarea {
+		resize: none;
+		padding: 15px 20px !important;
+
+		@include media-breakpoint-up(xl) {
+			height: 190px;
+		}
+		@media only screen and (min-width: 1920px) {
+			height: 260px;
+			padding: 20px !important;
+		}
+	}
+	br {
+		display: none;
+	}
+	button {
+		border: none;
+		@extend %latoBold;
+		background: $orange;
+		color: $white;
+		border-radius: 25px;
+		margin-top: 25px;
+		transition: all 0.3s ease-in-out;
+		padding: 8px 20px;
+		font-size: 14px;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 16px;
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: 18px;
+		}
+		@media only screen and (min-width: 1920px) {
+			font-size: 24px;
+			padding: 10px 25px;
+		}
+		&:hover {
+			background: lighten($orange, 5%);
+		}
+	}
+	// Radio Buttons
+	.preference-radios {
+		p {
+			color: $black !important;
+			font-size: 16px !important;
+
+			@include media-breakpoint-up(xl) {
+				font-size: 18px !important;
+			}
+			@media only screen and (min-width: 1920px) {
+				font-size: 24px !important;
+			}
+		}
+		label {
+			display: flex;
+			align-items: center;
+			margin: 0;
+
+			input {
+				position: relative;
+				margin: 0 5px 0 0;
+
+				&::after {
+					border: 1px solid $grey-200;
+					width: 15px;
+					height: 15px;
+					border-radius: 15px;
+					top: 15px;
+					left: 0px;
+					position: relative;
+					background-color: $white;
+					content: "";
+					display: inline-block;
+					visibility: visible;
+
+					@include media-breakpoint-up(xl) {
+						top: 12px;
+					}
+				}
+				&:checked {
+					&::after {
+						background-color: $orange;
+					}
+				}
+			}
+		}
+	}
+}

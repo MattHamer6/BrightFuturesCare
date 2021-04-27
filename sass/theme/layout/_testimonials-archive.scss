@@ -1,0 +1,11 @@
+#testimonials-archive {
+	padding-top: 0;
+
+	.testimonial {
+		margin-bottom: 16px;
+
+		&.staff {
+			display: none;
+		}
+	}
+}

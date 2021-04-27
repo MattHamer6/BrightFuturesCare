@@ -1,0 +1,159 @@
+.vacancies-values {
+	padding-bottom: 30px;
+
+	@include media-breakpoint-up(lg) {
+		padding-bottom: 50px;
+	}
+	@include media-breakpoint-up(xl) {
+		padding-bottom: 75px;
+	}
+	@media only screen and (min-width: 1920px) {
+		padding-bottom: 100px;
+	}
+	// Content
+	.content {
+		margin-bottom: 50px;
+
+		@include media-breakpoint-up(lg) {
+			width: 750px;
+		}
+		@include media-breakpoint-up(xl) {
+			width: 850px;
+			margin-bottom: 75px;
+		}
+		@media only screen and (min-width: 1920px) {
+			width: 1090px;
+			margin-bottom: 100px;
+		}
+		h2 {
+			@extend %latoRegular;
+			font-size: 24px;
+			margin-bottom: 20px;
+
+			@include media-breakpoint-up(md) {
+				font-size: 28px;
+			}
+			@include media-breakpoint-up(lg) {
+				font-size: 36px;
+			}
+			@include media-breakpoint-up(xl) {
+				font-size: 42px;
+				margin-bottom: 30px;
+			}
+			@media only screen and (min-width: 1920px) {
+				font-size: 48px;
+				margin-bottom: 60px;
+			}
+		}
+		p {
+			margin: 0;
+			@extend %fontRegular;
+			font-size: 16px;
+
+			@include media-breakpoint-up(xl) {
+				font-size: 18px;
+			}
+			@media only screen and (min-width: 1920px) {
+				font-size: 24px;
+			}
+		}
+	}
+	// Values Wrapper
+	&-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+
+		.image {
+			width: 100%;
+			text-align: center;
+			margin-bottom: 50px;
+
+			@include media-breakpoint-up(xl) {
+				text-align: left;
+				margin-bottom: 0;
+				width: 500px;
+			}
+			@media only screen and (min-width: 1920px) {
+				width: 740px;
+			}
+			img {
+				max-width: 300px;
+
+				@include media-breakpoint-up(sm) {
+					max-width: 500px;
+				}
+				@include media-breakpoint-up(md) {
+					max-width: 600px;
+				}
+				@include media-breakpoint-up(xl) {
+					max-width: 100%;
+				}
+			}
+		}
+		.values {
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+			text-align: center;
+
+			@include media-breakpoint-up(xl) {
+				text-align: left;
+				width: 600px;
+			}
+			@media only screen and (min-width: 1920px) {
+				padding-top: 100px;
+				width: 800px;
+			}
+			&-wrapper {
+				width: 100%;
+
+				@include media-breakpoint-up(md) {
+					width: calc(100% / 2);
+				}
+				h3 {
+					@extend %latoBold;
+					margin-bottom: 15px;
+					font-size: 18px;
+
+					@include media-breakpoint-up(lg) {
+						font-size: 22px;
+					}
+					@media only screen and (min-width: 1920px) {
+						font-size: 28px;
+					}
+				}
+				ul {
+					padding: 0;
+					margin: 0 0 30px;
+					list-style: none;
+
+					@include media-breakpoint-up(md) {
+						margin: 0 0 20px;
+					}
+					@media only screen and (min-width: 1920px) {
+						margin: 0 0 30px;
+					}
+
+					li {
+						@extend %fontRegular;
+						font-size: 16px;
+
+						@media only screen and (min-width: 1920px) {
+							font-size: 18px;
+						}
+					}
+				}
+			}
+			.button-wrapper {
+				width: 100%;
+				text-align: center;
+
+				@include media-breakpoint-up(xl) {
+					text-align: left;
+				}
+			}
+		}
+	}
+}

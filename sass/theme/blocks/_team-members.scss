@@ -1,0 +1,143 @@
+.team-members {
+	&-wrapper {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+
+		.team-member {
+			width: 100%;
+			margin: 0 0 25px;
+
+			@include media-breakpoint-up(sm) {
+				width: calc(100% / 2 - 16px);
+				margin: 0 8px 20px;
+			}
+			@include media-breakpoint-up(lg) {
+				width: calc(100% / 3 - 16px);
+				margin: 0 8px 30px;
+			}
+			@include media-breakpoint-up(xl) {
+				width: calc(100% / 4 - 16px);
+			}
+			@media only screen and (min-width: 1920px) {
+				margin: 0 8px 65px;
+			}
+			div {
+				@extend %backgroundImage;
+				width: 100%;
+				margin-bottom: 15px;
+				height: 500px;
+
+				@include media-breakpoint-up(sm) {
+					height: 315px;
+				}
+				@include media-breakpoint-up(md) {
+					height: 400px;
+				}
+				@include media-breakpoint-up(xl) {
+					height: 375px;
+				}
+				@media only screen and (min-width: 1920px) {
+					margin-bottom: 25px;
+					height: 590px;
+				}
+			}
+			b {
+				color: $primary;
+				@extend %latoBold;
+				margin: 0;
+				font-size: 18px;
+
+				@include media-breakpoint-up(lg) {
+					font-size: 24px;
+				}
+				@include media-breakpoint-up(xl) {
+					font-size: 26px;
+				}
+				@media only screen and (min-width: 1920px) {
+					font-size: 32px;
+				}
+			}
+			p {
+				font-size: 16px;
+
+				@include media-breakpoint-up(xl) {
+					font-size: 18px;
+				}
+				@media only screen and (min-width: 1920px) {
+					font-size: 24px;
+					margin-bottom: 25px;
+				}
+			}
+			a {
+				&:not(.main-button) {
+					display: block;
+					color: $black;
+					@extend %latoBold;
+					font-size: 14px;
+
+					@include media-breakpoint-up(xl) {
+						font-size: 16px;
+					}
+					@media only screen and (min-width: 1920px) {
+						font-size: 20px;
+					}
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+			&.join-us {
+				div {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					background: $red;
+					margin-bottom: 15px;
+					height: 500px;
+
+					@include media-breakpoint-up(sm) {
+						height: 315px;
+					}
+					@include media-breakpoint-up(md) {
+						height: 400px;
+					}
+					@include media-breakpoint-up(xl) {
+						height: 375px;
+					}
+					@media only screen and (min-width: 1920px) {
+						margin-bottom: 25px;
+						height: 590px;
+					}
+
+					h2 {
+						@extend %latoBold;
+						color: $white;
+						font-size: 24px;
+						margin-bottom: 30px;
+
+						@include media-breakpoint-up(sm) {
+							font-size: 28px;
+						}
+						@include media-breakpoint-up(md) {
+							font-size: 28px;
+						}
+						@include media-breakpoint-up(lg) {
+							font-size: 28px;
+							margin-bottom: 50px;
+						}
+						@include media-breakpoint-up(xl) {
+							font-size: 34px;
+							margin-bottom: 75px;
+						}
+						@media only screen and (min-width: 1920px) {
+							font-size: 52px;
+							margin-bottom: 100px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

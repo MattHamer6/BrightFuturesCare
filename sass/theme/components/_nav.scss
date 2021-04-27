@@ -1,0 +1,109 @@
+.header {
+	.navbar {
+		background: $grey-100;
+		padding: 0;
+
+		// Top-level Navogation Items
+		ul {
+			ul {
+				border-radius: 0;
+				border: none;
+				background: $green;
+				padding: 10px 20px;
+
+				a.nav-link,
+				a.dropdown-item {
+					color: $white;
+
+					&:hover {
+						color: $white;
+					}
+				}
+				ul {
+					padding: 0;
+				}
+			}
+			@include media-breakpoint-up(md) {
+				margin: 0 auto;
+
+				li {
+					padding: 0 8px;
+
+					a.nav-link {
+						color: $grey-200;
+						font-size: 14px;
+
+						@include media-breakpoint-only(md) {
+							font-size: 13px;
+						}
+					}
+					// Second-level Dropdown Links
+					&.dropdown {
+						ul {
+							padding: 0;
+							border-radius: 0;
+							border: none;
+							background: $green;
+
+							li {
+								padding: 5px 0;
+
+								&:not(:last-of-type) {
+									border-bottom: 1px solid $white;
+								}
+								a.nav-link,
+								a.dropdown-item {
+									color: $white;
+									font-size: 14px;
+
+									&:hover,
+									&:focus {
+										background: transparent;
+									}
+									&::after {
+										transform: rotate(-90deg);
+									}
+								}
+								// Third-level Dropdown Links
+								&.dropdown {
+									ul {
+										padding: 0;
+										left: 100%;
+										top: 0;
+										background: lighten($green, 10%);
+
+										li {
+											border-color: lighten($green, 10%);
+
+											a.dropdown-item {
+												color: $white;
+												font-size: 14px;
+												padding: 8px 1.5rem;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			@include media-breakpoint-up(lg) {
+				margin: 0 0 0 auto;
+			}
+		}
+	}
+	// Add caret to dropdown items
+	.dropdown-sub a[href$="#"]:after {
+		display: inline-block;
+		width: 0;
+		height: 0;
+		margin-left: 0.255em;
+		vertical-align: 0.255em;
+		content: "";
+		border-top: 0.3em solid;
+		border-right: 0.3em solid transparent;
+		border-bottom: 0;
+		border-left: 0.3em solid transparent;
+	}
+}

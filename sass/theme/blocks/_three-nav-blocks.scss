@@ -1,0 +1,78 @@
+.nav-blocks {
+	&-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+
+		.nav-block {
+			position: relative;
+			@extend %backgroundImage;
+			width: 100%;
+			height: 250px;
+
+			@include media-breakpoint-up(md) {
+				width: calc(100% / 3);
+				height: 200px;
+			}
+			@include media-breakpoint-up(lg) {
+				height: 250px;
+			}
+			@include media-breakpoint-up(xl) {
+				height: 300px;
+			}
+			@media only screen and (min-width: 1920px) {
+				height: 430px;
+			}
+			aside {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				padding: 10px 15px;
+				width: 100%;
+
+				@include media-breakpoint-up(lg) {
+					padding: 15px 20px;
+					width: 75%;
+				}
+				@include media-breakpoint-up(xl) {
+					padding: 20px 30px;
+					width: 55%;
+				}
+				@media only screen and (min-width: 1920px) {
+					padding: 30px 45px;
+				}
+				a {
+					color: $white;
+					@extend %fontBold;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					b {
+						@extend %fontBold;
+						margin-bottom: 0;
+						font-size: 16px;
+
+						@include media-breakpoint-up(xl) {
+							font-size: 18px;
+						}
+						@media only screen and (min-width: 1920px) {
+							font-size: 25px;
+						}
+					}
+					i {
+						position: relative;
+						left: 0;
+						transition: all 0.3s ease-in-out;
+					}
+					&:hover {
+						text-decoration: none;
+
+						i {
+							left: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
